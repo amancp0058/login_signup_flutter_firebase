@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:login_signup_flutter_firebase/SplashScreen.dart';
+import 'package:login_signup_flutter_firebase/signup.dart';
 
 import 'firebase_options.dart';
 

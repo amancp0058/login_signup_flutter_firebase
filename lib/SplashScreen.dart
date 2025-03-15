@@ -7,27 +7,38 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  
     return Container(
       alignment: Alignment.center,
 
-      decoration: BoxDecoration(gradient:LinearGradient(colors: [ Colors.red,Colors.black,],begin:Alignment.topCenter,end: Alignment.bottomCenter),),
+      decoration: BoxDecoration(color: Colors.white
+      ),
       child: Scaffold(
-        backgroundColor:Colors.transparent,
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 400,right: 230),
-                child: Lottie.asset(
-                  "assets/Animation - 1741841911722 (1).json",
-                  height: 100,
-                  width: 100,
-                  fit: BoxFit.cover,
-                ),
+            SizedBox(height: 250),
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: Lottie.asset(
+                "assets/Animation - 1741976338325.json",
+                height: 150,
+                width: 150,
+                fit: BoxFit.cover,
               ),
-            SizedBox(height: 15),
-            Center(child: ElevatedButton(onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Login()));}, child: Text("get start"),)),
-          ]
+            ),
+            SizedBox(height: 10),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                },
+                child: Text("get start"),
+              ),
+            ),
+          ],
         ),
       ),
     );
